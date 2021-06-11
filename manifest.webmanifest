@@ -1,12 +1,12 @@
 {
-  "name": "Lite, WebApp template",
-  "short_name": "Lite",
+  "name": "@cicciosgamino",
+  "short_name": "@",
   "start_url": "/?launcher=homescreen",
   "display": "fullscreen",
   "scope": "/",
   "lang":"en",
-  "theme_color": "#fff",
-  "background_color": "#fff",
+  "theme_color": "#ff9c08",
+  "background_color": "#ff9c08",
   "icons": [
     {
       "src": "images/manifest/icon128x128.png",
