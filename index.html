@@ -165,12 +165,22 @@
         background: url('/images/app.svg') center/260px no-repeat;
         margin-top: -240px;
       }
+
+      .background {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }
     </style>
   <script type="module" crossorigin src="/cicciosgamino.github.io.es.js"></script>
 </head>
   <body>
 
     <app-lite unresolved title="cicciosgamino.github.io"></app-lite>
+
+    <canvas class="background"></canvas>
 
     <noscript>
       <h1>Enable JavaScript</h1>
@@ -183,6 +193,14 @@
 
       window.addEventListener('DOMContentLoaded', (event) => {
 
+        // Init particles
+        Particles.init({
+          selector: '.background',
+          maxParticles: 200,
+          sizeVariations: 6,
+          color: '#ffba52'
+        })
+
         const appLite = document.querySelector('app-lite')
 
         // Check if dark mode is supported by browser
@@ -193,7 +211,7 @@
           // evaluate in first loading (default is light)
           if (window.matchMedia('(prefers-color-scheme: dark)').matches === true) {
             appLite.setAttribute('dark', ``)
-          }
+          } 
 
           // listener for changes
           window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
@@ -221,6 +239,8 @@
       })
 
     </script>
+
+    <script src="./node_modules/particlesjs/dist/particles.min.js"></script>
 
 </body>
 </html>
