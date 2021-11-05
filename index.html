@@ -7,10 +7,23 @@
     <title>cicciosgamino.github.io</title>
     <meta name="generator" content="lite(@cicciosgamino)">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
-    <!-- See https://goo.gl/OOhYW5 -->
+    
+    <!-- Startup configuration https://www.w3.org/TR/appmanifest/ -->
     <link rel="manifest" href="/manifest.webmanifest">
-    <!-- See https://goo.gl/qRE0vM -->
-    <meta name="theme-color" content="#fff">
+
+    <!-- Fallback application for legacy browser -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Lite">
+    <link rel="icon" sizes="128x128" href="/images/icons/icon128x128.png">
+    <link rel="icon" sizes="192x192" href="/images/icons/icon192x192.png">
+
+    <!-- Theme & Scheme -->
+    <meta name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#ff9c08">
+    <meta name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#333333">
     <meta name="color-scheme" content="dark light">
 
     <!-- Description -->
@@ -21,36 +34,74 @@
     <!-- Use relative path with base and rootPath -->
     <base href="./">
 
-    <!-- Preload the Logo SVG -->
-    <link rel="preload" as="image" href="/images/app.svg">
-
+    <!-- Preload the Logo SVG
+    <link rel="preload" as="image" href="/images/app.svg"> -->
     <link rel="icon" href="/images/favicon.ico">
-    <link id="favicon" rel="shortcut icon" href="/images/favicon/favicon-16.png" sizes="16x16">
-    <link id="favicon" rel="shortcut icon" href="/images/favicon/favicon-32.png" sizes="32x32">
-    <link id="favicon" rel="shortcut icon" href="/images/favicon/favicon-64.png" sizes="64x64">
-    <link id="favicon" rel="shortcut icon" href="/images/favicon/favicon-96.png" sizes="96x96">
+    <link id="favicon" rel="shortcut icon" href="/images/icons/icon16x16.png" sizes="16x16">
+    <link id="favicon" rel="shortcut icon" href="/images/icons/icon32x32.png" sizes="32x32">
+    <link id="favicon" rel="shortcut icon" href="/images/icons/icon64x64.png" sizes="64x64">
+    <link id="favicon" rel="shortcut icon" href="/images/icons/icon96x96.png" sizes="96x96">
 
-    <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Lite">
-    <link rel="icon" sizes="128x128" href="/images/manifest/icon128x128.png">
-    <link rel="icon" sizes="192x192" href="/images/manifest/icon192x192.png">
-
-    <!-- Add to homescreen for Safari on iOS -->
+    <!-- Apple Safari Pinned tabs -->
+    <link rel="mask-icon" href="/images/icons/icon.svg" color="#F5F5F5">
+    <!-- Apple - hidding Safari User Interface Components -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Apple - Specifying a launch screen image -->
+    <link rel="apple-touch-startup-image" href="/images/icons/icon180x180.png">
+    <!-- Apple - Adding a launch icon title -->
     <meta name="apple-mobile-web-app-title" content="Lite">
 
-    <!-- Homescreen icons -->
-    <link rel="apple-touch-icon" href="/images/manifest/icon-48x48.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/manifest/icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="96x96" href="/images/manifest/icon-96x96.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/manifest/icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="192x192" href="/images/manifest/icon-192x192.png">
-    <!-- Display on the MAC dock -->
-    <link rel="fluid-icon" type="image/png" href="/images/manifest/icon-192x192.png">
-    
+    <!-- Apple - Homescreen icons -->
+    <link rel="apple-touch-icon" href="/images/icons/ico58x58.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/icon144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/icon152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/images/icons/icon167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/icon180x180.png">
+    <!-- Apple - Display on the MAC dock -->
+    <link rel="fluid-icon" type="image/png" href="/images/icons/icon192x192.png">
 
+    <!-- Apple device Splash-Screen - iPhone 5 (640px x 1136px) -->
+    <link rel="apple-touch-startup-image"
+      href="/images/splash/iphone5_splash.png" 
+      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" />
+    <!-- Apple device Splash-Screen - iPhone 8, 7, 6s, 6 (750px x 1334px) -->
+    <link rel="apple-touch-startup-image"
+      href="/images/splash/iphone6_splash.png" 
+      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" />
+    <link rel="apple-touch-startup-image"
+      href="/images/splash/iphoneplus_splash.png" 
+      media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" />
+    <!-- Apple device Splash-Screen - iPhone X (1125px x 2436px) -->
+    <link rel="apple-touch-startup-image"
+      href="/images/splash/iphonex_splash.png" 
+      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" />
+    <link rel="apple-touch-startup-image"
+      href="/images/splash/iphonexr_splash.png" 
+      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" />
+    <!-- Apple device Splash-Screen - iPhone 8 Plus, 7 Plus, 6s Plus, 6 Plus (1242px x 2208px) -->
+    <link rel="apple-touch-startup-image"
+      href="/images/splash/iphonexsmax_splash.png" 
+      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" />
+    <!-- Apple device Splash-Screen - iPad Mini, Air (1536px x 2048px) -->
+    <link rel="apple-touch-startup-image"
+      href="/images/splash/ipad_splash.png" 
+      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" />
+    <!-- Apple device Splash-Screen - iPad Pro 10.5" (1668px x 2224px) -->
+    <link rel="apple-touch-startup-image"
+      href="/images/splash/ipadpro1_splash.png" 
+      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" />
+    <link rel="apple-touch-startup-image"
+      href="/images/splashs/ipadpro3_splash.png" 
+      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" />
+    <!-- Apple device Splash-Screen - iPad Pro 12.9" (2048px x 2732px) -->
+    <link rel="apple-touch-startup-image"
+      href="/images/splash/ipadpro2_splash.png" 
+      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" />
+
+
+    
     <!-- Tile icon for Windows 8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="/images/manifest/icon-144x144.png">
     <meta name="msapplication-TileColor" content="#fff">
@@ -141,31 +192,6 @@
         --ciccio-color: yellowgreen;
       }
 
-      /* styling for rendering while resources are loading  TEXT-VERSION
-      app-lite[unresolved] {
-        display: block;
-        min-height: 101vh;
-        line-height: 68px;
-        text-align: center;
-        font-size: 16px;
-        font-weight: 600;
-        letter-spacing: 0.3em;
-        color: #f5f5f5;
-        padding: 0 16px;
-        overflow: visible;
-      } */ 
-
-      /* styling for rendering while resources are laoding   GIF-VERSION */
-      app-lite[unresolved] {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('/images/app.svg') center/260px no-repeat;
-        margin-top: -240px;
-      }
-
       .background {
         display: block;
         position: absolute;
@@ -236,9 +262,7 @@
           `padding: 30px 7px 20px 13px; background: url(https://raw.githubusercontent.com/CICCIOSGAMINO/cicciosgamino.github.io/master/images/beer.jpg) no-repeat;background-size:cover;`,
           `font-size: 37px; color: #ff9c08;`,
           `padding: 10px 0px 0px 0px; font-size: 16px; color: #333;`
-        );
-
-        document.querySelector('app-lite').removeAttribute('unresolved')
+        )
       })
 
     </script>
